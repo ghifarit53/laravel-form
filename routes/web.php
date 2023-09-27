@@ -14,10 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
     return view('welcome', [
-        "title" => "Home"
+        "title" => "Home",
     ]);
 });
 
+Route::get('/login', function() {
+    return view('login', [
+        "title" => "Login",
+    ]);
+});
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);

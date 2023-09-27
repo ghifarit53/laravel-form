@@ -11,4 +11,6 @@ class RegisterController extends Controller
             "title" => "Register"
         ]);
     }
+
+    
 }
